@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Faculty Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor = "let student of students ">
+    <ion-avatar slot="start">
+      <img style="width: auto;" src="../../assets/amity.png">
+    </ion-avatar>
+    <ion-label>
+      <h2>{{student.name.firstName}} {{student.name.lastName}}</h2>
+      <h2>{{student.branch}}</h2>
+      <h3>Entry At {{student.entry_time}}</h3>
+      <p *ngIf="student.loged_in===true" style="color: green;">Present</p>
+      <p *ngIf="student.loged_in===false" style="color: red;">Absent</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
