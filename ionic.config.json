@@ -1,5 +1,7 @@
 {
   "name": "finalYear",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,12 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="primary">
+    <ion-title >
+      Attendance Marking System
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content >
+  <div class="pads">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
@@ -14,7 +15,25 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>Due to technical fault our biometric device is not working  <a target="_blank" rel="noopener noreferrer" href="">Use enrolment number to mark the attendance</a></p>
+    <br>
+    <strong>Enter Your Enrolment Number</strong>
+   
+    
+
   </div>
+  <div class="input-center">
+  <ion-list  lines="full" class="ion-no-margin ion-no-padding">
+    <ion-item>
+      <ion-label position="stacked">Enrolment number<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="enrol_num" required type="text"></ion-input>
+    </ion-item>
+    <ion-button (click)="mark()">Mark Here</ion-button>
+  </ion-list>
+  <p (click)="gotToFaculty()">Faculty Area</p>
+</div>
+
+</div>
+
+
 </ion-content>
